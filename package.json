@@ -85,6 +85,8 @@
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@sl-code-lords/text-pro-me": "^1.0.0",
     "@blackamda/telegram-image-url": "^1.0.0",
+    "pixaldrain-sinhalasub": "git+https://github.com/DarkMakerofc/pixaldrain-sinhalasub.git",
+    "@sl-code-lords/movie-api":"1.0.0",
         "wikipedia":"2.1.2",
         "xfarr-api": "^1.0.3",
         "yargs": "^17.6.0",
