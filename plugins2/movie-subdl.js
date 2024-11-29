@@ -22,35 +22,36 @@ async (conn, mek, m, { from, q, reply }) => {
 
         const downloadLocation = parts[0].trim(); // First part as the download location (JID)
         const movieLink = parts[1].trim(); // Second part as the movie link
-        
+
         const result = await SinhalaSub.movie(movieLink);
         if (!result.status) return reply("Movie details not found.");
 
         const movie = result.result;
-        let message = *${movie.title}*\n\n;
-        message += Release Date: ${movie.release_date}\n;
-        message += IMDb Rating: ${movie.IMDb_Rating}\n;
-        message += Director: ${movie.director.name}\n\n;
-        message += Download Location (JID): ${downloadLocation}\n\n; // Include the download location in the message
-        message += *ᴍᴏᴠɪᴇ ᴅᴇᴛᴀɪʟꜱ ᴜᴘʟᴏᴀᴅ ʙʏ ᴍᴏᴠɪᴇ ᴡᴀʙᴏᴛ*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ • ɴᴇᴛʜᴍɪᴋᴀᴛᴇᴄʜ*;
+        let message = `*${movie.title}*\n\n`;
+        message += `Release Date: ${movie.release_date}\n`;
+        message += `IMDb Rating: ${movie.IMDb_Rating}\n`;
+        message += `Director: ${movie.director.name}\n\n`;
+        message += `Download Location (JID): ${downloadLocation}\n\n`;
+        message += `*ᴍᴏᴠɪᴇ ᴅᴇᴛᴀɪʟꜱ ᴜᴘʟᴏᴀᴅ ʙʏ ᴍᴏᴠɪᴇ ᴡᴀʙᴏᴛ*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ • ɴᴇᴛʜᴍɪᴋᴀᴛᴇᴄʜ*`;
+       
 
         const imageUrl = movie.images && movie.images.length > 0 ? movie.images[0] : null;
 
         await conn.sendMessage(from, { image: { url: imageUrl }, caption: message }, { quoted: mek });
 
         const quality = "HD 720p";
-        
+
         const directLink = await PixaldrainDL(movieLink, quality, "direct");
-        
+
         if (directLink) {
             // Send the download link to the specified JID (downloadLocation)
             await conn.sendMessage(downloadLocation, { 
                 document: { url: directLink },
                 mimetype: 'video/mp4',
-                fileName: 🎬MOVIE DOWNLOADER.mp4,
-                caption: *${movie.title}*\n\nDownload Location: ${downloadLocation}\n*ᴍᴏᴠɪᴇ ᴜᴘʟᴏᴀᴅ ʙʏ ᴍᴏᴠɪᴇ ᴡᴀʙᴏᴛ*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ • ɴᴇᴛʜᴍɪᴋᴀᴛᴇᴄʜ*
+                fileName: '🎬MOVIE DOWNLOADER.mp4',
+                caption: `*${movie.title}*\n\nDownload Location: ${downloadLocation}\n*ᴍᴏᴠɪᴇ ᴜᴘʟᴏᴀᴅ ʙʏ ᴍᴏᴠɪᴇ ᴡᴀʙᴏᴛ*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ • ɴᴇᴛʜᴍɪᴋᴀᴛᴇᴄʜ*`
             }, { quoted: mek });
-            
+
             reply("The download has been sent to the specified location.\nබාගත කිරීම නිශ්චිත ස්ථානයට යවා ඇත.");
         } else {
             reply("Could not find the 720p download link. Please check the URL or try a different movie.");
@@ -58,6 +59,6 @@ async (conn, mek, m, { from, q, reply }) => {
     } catch (e) {
         console.log(e);
         await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
-        return reply(Error: ${e.message});
+        return reply(`Error: ${e.message}`);
     }
 });
