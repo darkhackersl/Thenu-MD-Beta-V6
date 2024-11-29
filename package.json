@@ -89,6 +89,7 @@
     "@sl-code-lords/movie-api":"1.0.0",
         "wikipedia":"2.1.2",
         "xfarr-api": "^1.0.3",
+    "xnxx-dl": "^1.0.2",
         "yargs": "^17.6.0",
         "youtube-yts": "^2.0.0",
         "youtubedl-core": "npm:@distube/ytdl-core"
