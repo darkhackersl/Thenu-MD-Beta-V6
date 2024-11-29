@@ -17,7 +17,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const parts = input.split("&"); // Split input by '&'
 
         if (parts.length < 2) {
-            return reply("Please provide both the download location (JID) and the movie link in the format: .moviedl jid&movie_link.");
+            return reply("Please provide both the download location (JID) and the movie link in the format\n\n*.moviedl jid&movie_link.*");
         }
 
         const downloadLocation = parts[0].trim(); // First part as the download location (JID)
