@@ -48,7 +48,7 @@ async function getLatestNews() {
 
 async function checkAndPostNews(bot, groupId) {
   const latestNews = await getLatestNews();
-  global.newsBotName = "> THENU-MD";
+  global.newsBotName = "> THENU-MD-V6.0.0";
   
   latestNews.forEach(async newsItem => {
     if (!lastNewsTitles[groupId]) {
