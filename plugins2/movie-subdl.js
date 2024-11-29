@@ -27,7 +27,7 @@ async (conn, mek, m, { from, q, reply }) => {
         if (!result.status) return reply("Movie details not found.");
 
         const movie = result.result;
-        let message = *${movie.title}*\n\n;
+        let message = ${movie.title}\n\n;
         message += Release Date: ${movie.release_date}\n;
         message += IMDb Rating: ${movie.IMDb_Rating}\n;
         message += Director: ${movie.director.name}\n\n;
