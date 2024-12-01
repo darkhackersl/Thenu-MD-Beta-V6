@@ -8,7 +8,7 @@ const axios = require('axios');
 //---------------------------------------------------------------------------
 cmd({
             pattern: "live",
-            desc: "Show Live Time Of Pakistan",
+            desc: "Show Live Time Of 	LK",
             category: "fun",
 	          filename: __filename,
             use: '<group link.>',
