@@ -5,6 +5,7 @@ const { fetchJson } = require('../lib/functions');
 // Define the ai command
 cmd({
     pattern: "bible",
+    react: "🌟",
     desc: "AI chat",
     category: "ai",
     filename: __filename
