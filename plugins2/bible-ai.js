@@ -21,12 +21,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 🔍 *𝗤𝘂𝗲𝗿𝘆*: _${q}_
 
-💬 *𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲*: _${response}_
+💬 *𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲*: _${text}_
+
+🌟 *REF*: _${ref}_
 
 THENUX MD BIBLE INFORMATION`;
 
         // Send the reply with the thumbnail image
-        await conn.sendMessage(from, { image: { url: 'https://i.ibb.co/mJ5vk7c/Thenu-MD-new-card-1.png' }, caption: replyText }, { quoted: mek });
+        await conn.sendMessage(from, { image: { url: 'https://i.ibb.co/QXW2jmR/NEW-BETA.png' }, caption: replyText }, { quoted: mek });
 
     } catch (e) {
         console.log(e);
