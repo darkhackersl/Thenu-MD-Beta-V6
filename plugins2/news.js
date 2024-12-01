@@ -48,7 +48,7 @@ async function getLatestNews() {
 
 async function checkAndPostNews(bot, groupId) {
   const latestNews = await getLatestNews();
-  global.newsBotName = "> THENU-MD-V6.0.0";
+  global.newsBotName = "*🔵𝐍𝐄𝐖𝐒 𝐀𝐋𝐄𝐑𝐓!*\n██████████████████████████████████████████\n\n> THENU-MD-V6.0.0";
   
   latestNews.forEach(async newsItem => {
     if (!lastNewsTitles[groupId]) {
@@ -92,7 +92,7 @@ cmd({
   filename: __filename
 }, async (bot, message, args, { from }) => {
   const hiruNews = await getHiruNews();
-  global.newsBotName2 = "```THARUX-MD```";
+  global.newsBotName2 = "*🔵𝐍𝐄𝐖𝐒 𝐀𝐋𝐄𝐑𝐓!*\n██████████████████████████████████████████\n\n> Thenu-MD";
   if (hiruNews) {
   await bot.sendPresenceUpdate('composing', from);
     await bot.sendMessage(from, {image: { url: `${hiruNews.thumb}`, mimetype: "image/jpeg" }, caption: `📰 *Hiru News Update*:\n\n*${hiruNews.title}*\n\n[ *${hiruNews.date}* ]\n\n${hiruNews.content}\n\n${newsBotName2}`
@@ -129,7 +129,7 @@ cmd({
           }, 30000);
         }
       } else {
-        await bot.sendMessage(from, { text: "📰 *24/7 News is already activated!*" });
+        await bot.sendMessage(from, { text: "📰 *24/7 News is already activated!*\n> ©Thenu-MD" });
       }
     } else {
       await bot.sendMessage(from, { text: "🚫 *This command can only be used by group admins or the bot owner.*" });
@@ -152,7 +152,7 @@ cmd({
     if (isAdmin) {
       if (activeGroups[from]) {
         delete activeGroups[from];
-        await bot.sendMessage(from, { text: "🛑 *24/7 News Deactivated.*" });
+        await bot.sendMessage(from, { text: "🛑 *24/7 News Deactivated.*\n©Thenu-MD" });
 
         if (Object.keys(activeGroups).length === 1 && activeGroups.interval) {
           clearInterval(activeGroups.interval);
