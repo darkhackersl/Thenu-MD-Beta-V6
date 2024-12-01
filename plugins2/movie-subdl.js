@@ -17,7 +17,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const parts = input.split("&"); // Split input by '&'
 
         if (parts.length < 2) {
-            return reply("Please provide both the download location (JID) and the movie link in the format\n\n*.moviedl jid&movie_link.*");
+            return reply("Please provide both the download location (JID) and the movie link in the format\n\n𝐄𝐗:*.moviedl jid 9476XXXXXXX@s.whatsapp.net&https://sinhalasub.lk/movies/the-lion-king-2019-sinhala-subtitles/.*");
         }
 
         const downloadLocation = parts[0].trim(); // First part as the download location (JID)
@@ -32,7 +32,7 @@ async (conn, mek, m, { from, q, reply }) => {
         message += `IMDb Rating: ${movie.IMDb_Rating}\n`;
         message += `Director: ${movie.director.name}\n\n`;
         message += `Download Location (JID): ${downloadLocation}\n\n`;
-        message += `*ᴍᴏᴠɪᴇ ᴅᴇᴛᴀɪʟꜱ ᴜᴘʟᴏᴀᴅ ʙʏ ᴍᴏᴠɪᴇ ᴡᴀʙᴏᴛ*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ • ɴᴇᴛʜᴍɪᴋᴀᴛᴇᴄʜ*`;
+        message += `*ᴍᴏᴠɪᴇ ᴅᴇᴛᴀɪʟꜱ ᴜᴘʟᴏᴀᴅ ʙʏ ❝𝐓𝐡𝐞𝐧𝐮 𝐌𝐃❞*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ • ɴᴇᴛʜᴍɪᴋᴀᴛᴇᴄʜ*\n\n> Thenux-AI`;
        
 
         const imageUrl = movie.images && movie.images.length > 0 ? movie.images[0] : null;
@@ -48,11 +48,11 @@ async (conn, mek, m, { from, q, reply }) => {
             await conn.sendMessage(downloadLocation, { 
                 document: { url: directLink },
                 mimetype: 'video/mp4',
-                fileName: '🎬MOVIE DOWNLOADER.mp4',
-                caption: `*${movie.title}*\n\nDownload Location: ${downloadLocation}\n*ᴍᴏᴠɪᴇ ᴜᴘʟᴏᴀᴅ ʙʏ ᴍᴏᴠɪᴇ ᴡᴀʙᴏᴛ*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ • ɴᴇᴛʜᴍɪᴋᴀᴛᴇᴄʜ*`
+                fileName: '🎬MOVIE DOWNLOADER-Thenu-MD.mp4',
+                caption: `*${movie.title}*\n\nDownload Location: ${downloadLocation}\n*HD 720p*\n\n*ᴍᴏᴠɪᴇ ᴜᴘʟᴏᴀᴅ ʙʏ ❝𝐓𝐡𝐞𝐧𝐮 𝐌𝐃❞*\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ • ɴᴇᴛʜᴍɪᴋᴀᴛᴇᴄʜ\n\n> Thenux-AI*`
             }, { quoted: mek });
 
-            reply("The download has been sent to the specified location.\nබාගත කිරීම නිශ්චිත ස්ථානයට යවා ඇත.");
+            reply("*The download has been sent to the specified location🌟*.\n\n*බාගත කිරීම නිශ්චිත ස්ථානයට යවා ඇත.🌟*\n\n> Thenu-MD");
         } else {
             reply("Could not find the 720p download link. Please check the URL or try a different movie.");
         }
