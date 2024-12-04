@@ -14,8 +14,11 @@ Welcome to the **THENU-MD-BETA** project for **Thenu-MD**.
  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=+•★⃝ THENU-+MD-+V6.0.0★⃝•;MULTI-DEVICE+WHATSAPP+BOT;DEVELOPED+BY+SUHAS+BRO;RELEASED+DATE+15%2F11%2F2024." alt="Typing SVG" /></a>
  </p>
 
+ ## Please Edit OWNER NUMBER in INDEX.JS Line 28
+ 
+![picindex](https://i.ibb.co/FJTf4zM/Screenshot-2024-12-04-132045.png)
 
-## SETUP
+# SETUP
 <p align="left">1. SESSION ID 
     <br>
 <a href='https://replit.com/@thenulapanapit2/Thenu-MD-BETA-Pair-2' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/SESSION ID-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a></p>
@@ -32,7 +35,7 @@ Welcome to the **THENU-MD-BETA** project for **Thenu-MD**.
 - 3 Please wait 1 minute & Type your number showing in you WEBVIEW .. If you not showing PAIR CODE Please full size your WEB PAGE.
 ![icon 3](https://i.ibb.co/6s1y2S1/Screenshot-2024-12-04-125609.png)
 
-## Deployment
+# Deployment
 
 You can deploy this application on various platforms. Here are some options:
 
