@@ -25,14 +25,12 @@ const {
     
     
     
-    const ownerNumber = ['94767096711']
+    const ownerNumber = ['94767096711']//ADD YOUR BOT NUMBER HERE! Without country code.!!
     
     
     
-    
-    //===================SESSION-AUTH============================
-   //=========== DONT EDIT ANYTHING !!! ==================
-    //=========== THENU-MD-BETA-V.6.0.0 !!! ===============
+//=========== DONT EDIT ANYTHING !!! ==================
+//=========== THENU-MD-BETA-V.6.0.0 !!! ===============
 
     
     const _0x39155e = _0x3eeb;
