@@ -99,4 +99,24 @@ async (conn, mek, m, { from, body, isOwner }) => {
             }
         }
     }                
+});         
+
+// AUTO CMD
+
+cmd({
+  on: "body"
+},    
+async (conn, mek, m, { from, body, isOwner }) => {
+    const filePath = path.join(__dirname, '../Thenu_MD/autocmd.json');
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    for (const text in data) {
+        if (body.toLowerCase() === text.toLowerCase()) {
+            const config = await readEnv();
+            if (config.AUTO_CMD === 'true') {
+                //if (isOwner) return;        
+                await m.reply(data[text])
+            
+            }
+        }
+    }                
 });                
