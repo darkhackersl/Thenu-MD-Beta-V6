@@ -1,3 +1,9 @@
+# ⚡ Dont deploy bot. 
+
+```We are updating our bot.! Realesing it soon!!🌟```
+
+
+
 # Thenu-MD-Beta-V6
 
 
